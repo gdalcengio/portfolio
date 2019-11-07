@@ -2,10 +2,16 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+
+    color: rgb(27, 27, 27);
 }
 
-a {
-    text-decoration: none;
+.element {
+    padding: 2rem;
+}
+
+section {
+    background: #ececec;
 }
 
 /* used perfect fourth scale from https://type-scale.com/ */
@@ -16,8 +22,107 @@ h4 {font-size: 1.777em;}
 h5 {font-size: 1.333em;}
 /* p {} */
 
+
+
 /* header */
 .heading {
     font-family: 'Nunito', 'Open Sans', sans-serif;
-    /* color: ; */
+    color: #52a2d5;
+}
+
+
+
+/* interactive elements */
+a {
+    text-decoration: none;
+    color: #52a2d5;
+    transition: 0.7s;
+}
+
+a:hover {
+    color: #90ccf4;
+    transition: 1s;
+}
+
+.nav-button {
+    background: white;
+    padding: .5rem 1rem;
+    transform:none;
+    transition: .25s;
+}
+
+.nav-button:hover {
+    position: relative;
+    transform:translate(0px, -5px);
+    transition: 0.5s;
+}
+
+.dropdown {
+    background: lightgrey;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.dropdown:focus {
+    text-decoration: none;
+}
+
+/* .dropdown-item {
+    text-align: center;
+} */
+
+.image-link {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    object-position: 0% 50%;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.image-link:hover {
+    object-position: 100% 50%;
+    transition: 1s;
+}
+
+
+
+/* text-elements */
+
+p {
+    background: lightblue;
+    max-width: 40rem;
+    border-radius: 3px;
+}
+
+.tooltip { /*tooltip styling modified from w3schools.com/css/css_tooltip.asp */
+    position: relative;
+    display: inline;
+    color: rgba(0, 0, 255, 1);
+}
+
+.tooltip .tooltiptext { /* Tooltip text */
+    visibility: hidden;
+    background-color: white;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext { /* Show the tooltip text when you mouse over the tooltip container */
+    display: inline;
+    visibility: visible;
+    transition: 1s;
+    background: black;
+}
+
+/* combined elements */
+.nav-main a{
+    display: block;
 }
