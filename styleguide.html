@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gabriele Dal Cengio - Style Guide</title>
+
+    <link href="css/normalize.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Barlow|Maven+Pro|News+Cycle|Rochester&display=swap" rel="stylesheet"> -->
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 class="heading">Portfolio Style Guide</h1>
+
+        <p>Gabriele Dal Cengio</p>
+        <p>301303147</p>
+
+        <nav class="nav-main">
+            <a href="#interactive_elements" class="nav-button">
+                Interactive Elements
+            </a>
+            <a href="#text_elements" class="nav-button">
+                Text Elements
+            </a>
+            <a href="#combined_elements" class="nav-button">
+                Combined Elements
+            </a>
+            <a href="project_template.html" class="nav-button">
+                Product Listing Template
+            </a>
+            <a href="#citations" class="nav-button">
+                Citations
+            </a>
+        </nav>
+    </header>
+
+
+
+    <!-- INTERACTIVE ELEMENTS SECTION // -->
+    <section id="interactive_elements">
+        <h2>Interactive Elements</h2>
+
+        <section class="element">
+            <h3>In-text link</h3>
+            <h4>CSS selector:</h4>
+            <p>.link</p>
+
+            <h4>Sample code:</h4>
+            <code>
+            &lt;p&gt;this is normal p&lt;a href="www.google.com" class="link"&gt;click here for an in-text link &lt;/a&gt; this is normal p&lt;/p&gt;
+        </code>
+
+            <h4>Rendered element:</h4>
+
+            <p>start of p <a href="https://www.google.com" class="link">click here for an in-text link</a> end of p </p>
+        </section>
+
+
+        <!-- Default Button styling section -->
+        <section class="element">
+
+            <h3>Navigation Link</h3>
+
+            <h4>CSS selector:</h4>
+            <p>.button-nav-container .button-nav</p>
+
+            <h4>Sample code:</h4>
+            <code>
+                <pre>
+                    &lt;a class="button-nav" href="#"&gt;
+                        Link To Section
+                    &lt;/a&gt;
+                </pre>
+            </code>
+
+            <h4>Rendered element:</h4>
+            <a class="nav-button" href="#">
+                Link To Section
+            </a>
+        </section>
+
+        <section class="element">
+            <h3>Radio Button with Label</h3>
+
+            <h4>CSS selector:</h4>
+            <p>.radio-input .radio-label</p>
+
+            <h4>Sample code:</h4>
+            <code>
+                <pre>
+                    &lt;div class="radio-input"&gt;
+                        &lt;input type="radio" name="example-radio" id="radio-element"&gt;
+                        &lt;label class="radio-label" for="radio-element"&gt; text here &lt;/label&gt;
+                    &lt;/div&gt;
+                </pre>
+            </code>
+            
+            <h4>Rendered element:</h4>
+            <div class="radio-input">
+                <input type="radio" name="example-radio" id="radio-element">
+                <label class="radio-label" for="radio-element">radio label</label>
+            </div>
+        </section>
+
+        <section class="element">
+            <h3>Image as a Link</h3>
+            <h4>CSS selector:</h4>
+            <p>.image-link-container .image-link .image-overlay</p>
+
+            <h4>Sample code:</h4>
+            <code>
+        <pre>
+            &lt;div class="image-link-container"&gt;
+                &lt;img src="img/sbnight3.jpg" alt="this is an example image"&gt;
+                &lt;a href="https://www.google.com" class="image-link"&gt;
+                    &lt;div class="image-overlay"&gt;&lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        </pre>
+        </code>
+
+            <h4>Rendered element:</h4>
+            <div class="image-link-container">
+                <img src="img/sbnight3.jpg" alt="this is an example image">
+                <a href="https://www.google.com" class="image-link">
+                    <div class="image-overlay"></div>
+                </a>
+            </div>
+        </section>
+    </section>
+    <!-- // INTERACTIVE ELEMENTS SECTION -->
+
+
+
+    <!-- TEXT ELEMENTS SECTION // -->
+    <section id="text_elements">
+        <h2>Text Elements</h2>
+
+        <!--knew this already-->
+        <section class="element">
+            <h3>Headings</h3>
+            <h4>CSS selector:</h4>
+            <p>.heading</p>
+
+            <h4>Sample code:</h4>
+            <code>
+        <pre>
+            &lt;h1 class="heading"&gt; text here &lt;/h1&gt;
+            &lt;h2 class="heading"&gt; text here &lt;/h2&gt;
+            &lt;h3 class="heading"&gt; text here &lt;/h3&gt;
+            &lt;h4 class="heading"&gt; text here &lt;/h4&gt;
+        </pre>
+        </code>
+
+            <h4>Rendered element:</h4>
+
+            <h1 class="heading">header 1</h1>
+            <h2 class="heading">header 2</h2>
+            <h3 class="heading">header 3</h3>
+            <h4 class="heading">header 4</h4>
+        </section>
+
+        <section class="element">
+            <h3>Paragraphs</h3>
+            <h4>CSS selector:</h4>
+            <p>.block-paragraph</p>
+
+            <h4>Sample code:</h4>
+            <code>
+            <pre>
+                &lt;p class="block-paragraph"&gt; 
+                    the paragraph goes here 
+                &lt;/p&gt;
+            </pre>
+            </code>
+
+            <h4>Rendered element:</h4>
+            <p class="block-paragraph">
+                this is a lengthy Paragraph
+                of whatever I am trying to type at the moment
+                . At this point I should've just tried to put it
+                lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+                ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
+            </p>
+        </section>
+
+        <section class="element">
+            <h3>Numbered Lists</h3>
+
+            <h4>CSS selector:</h4>
+            <p>ol li</p>
+
+            <h4>Sample code:</h4>
+            <code>
+        <pre>
+            &lt;ol&gt;
+              &lt;li&gt;
+                    This is a list item
+                &lt;/li&gt;
+                &lt;li&gt;
+                    This is the second list item
+              &lt;/li&gt;
+            &lt;/ol&gt;
+        </pre>
+        </code>
+
+            <h4>Rendered element:</h4>
+            <ol>
+                <li>
+                    This is a list item
+                </li>
+                <li>
+                    This is the second list item
+                </li>
+            </ol>
+        </section>
+    </section>
+
+
+    <!-- ADD A DROPDOWN -->
+
+
+
+
+
+
+    <!-- // TEXT ELEMENTS SECTION -->
+
+
+
+    <!-- COMBINED ELEMENTS SECTION // -->
+    <section id="combined_elements">
+        <h2>Combined Elements</h2>
+
+        <section class="element">
+            <h3>Main Navigation</h3>
+
+            <h4>CSS selector:</h4>
+            <p>.nav-header .nav-main</p>
+
+            <h4>Sample code:</h4>
+            <code>
+                <pre>
+                    &lt;header class="nav-header"&gt;
+                        &lt;div&gt;
+                            &lt;h1 class="heading"&gt;Dusk&lt;/h1&gt;
+                        &lt;/div&gt;
+                        &lt;nav class="nav-main"&gt;
+                            &lt;a class="button-nav" href="#"&gt;
+                                first nav item
+                            &lt;/a&gt;
+                            &lt;a class="button-nav" href="#"&gt;
+                                second nav item
+                            &lt;/a&gt;
+                            &lt;a class="button-nav" href="#"&gt;
+                                third nav item
+                            &lt;/a&gt;
+                            &lt;a class="button-nav" href="#"&gt;
+                                fourth nav item
+                            &lt;/a&gt;
+                        &lt;/nav&gt;
+                    &lt;/header&gt;
+                </pre>
+            </code>
+
+            <h4>Rendered element:</h4>
+            <header class="nav-header">
+                <div>
+                    <h1 class="heading">Gabriele Dal Cengio</h1>
+                </div>
+                <nav class="nav-main">
+                    <a class="button-nav" href="#">
+                        first nav item
+                    </a>
+                    <a class="button-nav" href="#">
+                        second nav item
+                    </a>
+                    <a class="button-nav" href="#">
+                        third nav item
+                    </a>
+                    <a class="button-nav" href="#">
+                        fourth nav item
+                    </a>
+                </nav>
+            </header>
+        </section>
+    </section>
+    <!-- // COMBINED ELEMENTS SECTION -->
+
+
+
+    <h1>Ethos and Bio</h1>
+    <section class="element">
+        <p>
+            I like interaction - helps people learn through the act of playing. I like cleanliness, i'm innovative and I am a jack of all trades.
+        </p>
+    </section>
+
+
+    <section id="citations">
+        <h2>Citations</h2>
+
+        <ul>
+            <li>Sideshow. Designer. 2012. <strong>Rochester [Font]</strong>. Retrieved from <a
+                    href="https://https://fonts.google.com/specimen/Rochester">https://https://fonts.google.com/specimen/Rochester</a>
+            </li>
+            <li>Joe Prince. Principle Design. <strong>Maven Pro [Font]</strong>. Retrieved from <a
+                    href="https://fonts.google.com/specimen/Maven+Pro">https://fonts.google.com/specimen/Maven+Pro</a>
+            </li>
+            <li>Unknown. Photographer. <strong>Skateboarding at night [Image]</strong>. Retrieved from <a
+                    href="https://acnetheme.tumblr.com/post/29259252662">https://acnetheme.tumblr.com/post/29259252662</a>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
