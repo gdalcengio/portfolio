@@ -1,4 +1,7 @@
 /* set up */
+* {
+  box-sizing: border-box;
+}
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -11,7 +14,7 @@ body {
 }
 
 section {
-    background: #ececec;
+    /* background: #d9d9d9; */
 }
 
 /* used perfect fourth scale from https://type-scale.com/ */
@@ -27,7 +30,7 @@ h5 {font-size: 1.333em;}
 /* header */
 .heading {
     font-family: 'Nunito', 'Open Sans', sans-serif;
-    color: #52a2d5;
+    padding: 1rem;
 }
 
 
@@ -35,30 +38,42 @@ h5 {font-size: 1.333em;}
 /* interactive elements */
 a {
     text-decoration: none;
-    color: #52a2d5;
+    color: #f9cf00;
     transition: 0.7s;
 }
 
 a:hover {
-    color: #90ccf4;
+    color: #f19f4d;
     transition: 1s;
 }
 
+a:active {
+    color: #f19f4d;
+}
+
 .nav-button {
-    background: white;
+    display: inline-block;
     padding: .5rem 1rem;
-    transform:none;
+    transform: none;
     transition: .25s;
 }
 
 .nav-button:hover {
     position: relative;
     transform:translate(0px, -5px);
+    cursor: pointer;
+    
     transition: 0.5s;
 }
 
+.nav-button:focus {
+    position: relative;
+    transform:translate(0px, 1px);
+    transition: 0.2s;
+}
+
 .dropdown {
-    background: lightgrey;
+    background: #d9d9d9;
     border-radius: 3px;
     text-align: center;
 }
@@ -72,6 +87,7 @@ a:hover {
 } */
 
 .image-link {
+    /* position: absolute; */
     width: 20rem;
     height: 20rem;
     object-fit: cover;
@@ -90,7 +106,7 @@ a:hover {
 /* text-elements */
 
 p {
-    background: lightblue;
+    /* background: lightblue; */
     max-width: 40rem;
     border-radius: 3px;
 }
@@ -125,4 +141,10 @@ p {
 /* combined elements */
 .nav-main a{
     display: block;
+}
+
+.title-overlay {
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }
