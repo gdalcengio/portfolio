@@ -33,6 +33,12 @@ h5 {font-size: 1.333em;}
     padding: 1rem;
 }
 
+.signature {
+    font-family: 'Nunito', 'Open Sans', sans-serif;
+    padding: 1rem;
+    padding-bottom: 0rem;
+}
+
 
 
 /* interactive elements */
@@ -86,8 +92,11 @@ a:active {
     text-align: center;
 } */
 
+.image-link-container {
+    position: relative;
+}
+
 .image-link {
-    /* position: absolute; */
     width: 20rem;
     height: 20rem;
     object-fit: cover;
@@ -100,6 +109,8 @@ a:active {
     object-position: 100% 50%;
     transition: 1s;
 }
+
+
 
 
 
@@ -146,5 +157,12 @@ p {
 .title-overlay {
     position: absolute;
     top: 0;
-    z-index: -1;
+    z-index: 99;
+}
+
+.title-overlay ~ .imge-link:hover, .title-overlay:hover {
+    top: 40rem;
+    width: 2rem;
+    margin: 0 auto;
+    transition: 1s;
 }
