@@ -97,24 +97,19 @@ a:active {
 
 .image-link-container {
     position: relative;
-    width: 20rem;
+    flex-basis: 33%;
+    margin-bottom: 2rem;
+
 }
 
 .image-link {
-    width: 20rem;
-    height: 20rem;
+    width: 16rem;
+    height: 16rem;
     object-fit: cover;
     object-position: 0% 50%;
     border-radius: 3px;
     transition: 0.5s;
 }
-
-/* .image-link:hover {
-    object-position: 100% 50%;
-    transition: 1s;
-} */
-
-
 
 
 
@@ -157,10 +152,10 @@ p {
 
 .overlay {
     position: absolute;
-    width: 20rem;
-    height: 20rem;
+    width: 16rem;
+    height: 16rem;
     text-align: center;
-    line-height: 20rem;
+    line-height: 16rem;
     top: 0;
     left: 0;
 }
@@ -170,11 +165,51 @@ p {
     transition: 1s;
 }
 
-.image-link-container:hover .overlay{
-    background: rgba(0, 0, 255, 0.25)
+.image-link-container:hover .overlay-all{
+    background: rgba(116, 57, 18, 0.25);
+}
+
+.image-link-container:hover .overlay-frontend{
+    background: rgba(0, 0, 255, 0.25);
+}
+
+.image-link-container:hover .overlay-game{
+    background: rgba(0, 255, 0, 0.25);
+}
+
+.image-link-container:hover .overlay-backend{
+    background: rgba(255, 0, 0, 0.25);
 }
 
 .selection, .nav-main {
     display: flex;
     flex-direction: column;
+}
+
+#all-select {
+    color: rgba(116, 57, 18, 1);
+}
+
+#frontend-select {
+    color: rgba(0, 0, 255, 1);
+}
+
+#backend-select {
+    color: rgba(255, 0, 0, 1);
+}
+
+#game-select {
+    color: rgba(0, 255, 0, 1);
+}
+
+/*  */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.about h2 {
+    margin: 0;
+    padding: 0;
 }
