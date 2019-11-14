@@ -26,7 +26,6 @@ h5 {font-size: 1.333em;}
 /* p {} */
 
 
-
 /* header */
 .heading {
     font-family: 'Nunito', 'Open Sans', sans-serif;
@@ -35,8 +34,12 @@ h5 {font-size: 1.333em;}
 
 .signature {
     font-family: 'Nunito', 'Open Sans', sans-serif;
-    padding: 1rem;
-    padding-bottom: 0rem;
+    margin-bottom: 3rem;
+}
+
+.signature > * {
+    padding: 0 1rem;
+    margin: 0;
 }
 
 
@@ -94,6 +97,7 @@ a:active {
 
 .image-link-container {
     position: relative;
+    width: 20rem;
 }
 
 .image-link {
@@ -105,10 +109,10 @@ a:active {
     transition: 0.5s;
 }
 
-.image-link:hover {
+/* .image-link:hover {
     object-position: 100% 50%;
     transition: 1s;
-}
+} */
 
 
 
@@ -150,19 +154,27 @@ p {
 }
 
 /* combined elements */
-.nav-main a{
-    display: block;
-}
 
-.title-overlay {
+.overlay {
     position: absolute;
+    width: 20rem;
+    height: 20rem;
+    text-align: center;
+    line-height: 20rem;
     top: 0;
-    z-index: 99;
+    left: 0;
 }
 
-.title-overlay ~ .imge-link:hover, .title-overlay:hover {
-    top: 40rem;
-    width: 2rem;
-    margin: 0 auto;
+.image-link-container:hover .image-link{
+    object-position: 100% 50%;
     transition: 1s;
+}
+
+.image-link-container:hover .overlay{
+    background: rgba(0, 0, 255, 0.25)
+}
+
+.selection, .nav-main {
+    display: flex;
+    flex-direction: column;
 }
