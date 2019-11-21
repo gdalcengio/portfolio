@@ -7,14 +7,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 
     color: rgb(27, 27, 27);
+    
 }
 
 .element {
     padding: 2rem;
-}
-
-section {
-    /* background: #d9d9d9; */
 }
 
 /* used perfect fourth scale from https://type-scale.com/ */
@@ -23,14 +20,23 @@ h2 {font-size: 3.157em;}
 h3 {font-size: 2.369em;}
 h4 {font-size: 1.777em;}
 h5 {font-size: 1.333em;}
-/* p {} */
+p { 
+    line-height: 150%;
+} 
 
 img {
     max-width:100%;
     max-height:100%;
 }
 
+// scss variables
+$accent: #F19F4D;
+$accent-down: #F9CF00;
+$neutral: #D9D9D9;
+$interact: #4484CE;
 
+
+// mobile first
 /* header */
 .heading {
     font-family: 'Nunito', 'Open Sans', sans-serif;
@@ -38,31 +44,46 @@ img {
 }
 
 .signature {
+    display: block;
     font-family: 'Nunito', 'Open Sans', sans-serif;
     margin-bottom: 3rem;
+    text-align: center;
+    width: 100%;
 }
 
-.signature > * {
-    padding: 0 1rem;
-    margin: 0;
-}
-
-
-
-/* interactive elements */
 a {
     text-decoration: none;
-    color: #f9cf00;
+    width: fit-content;
     transition: 0.7s;
 }
 
-a:hover {
-    color: #f19f4d;
+a:visited {
+    color: black;
+}
+
+/* interactive elements */
+.link {
+    text-decoration: none;
+    color: $accent;
+    transition: 0.7s;
+}
+
+.link:hover {
+    color: $accent-down;
     transition: 1s;
 }
 
-a:active {
-    color: #f19f4d;
+.link:active {
+    color: $accent-down;
+}
+
+.link:visited {
+    color: $accent;
+}
+
+.selection, .nav-main {
+    display: none;
+    flex-direction: column;
 }
 
 .nav-button {
@@ -87,7 +108,7 @@ a:active {
 }
 
 .dropdown {
-    background: #d9d9d9;
+    background: $neutral;
     border-radius: 3px;
     text-align: center;
 }
@@ -96,15 +117,11 @@ a:active {
     text-decoration: none;
 }
 
-/* .dropdown-item {
-    text-align: center;
-} */
-
 .image-link-container {
     position: relative;
-    flex-basis: 33%;
-    margin-bottom: 2rem;
-
+    margin: 1rem;
+    // flex-basis: 40%;
+    // margin-bottom: 2rem;
 }
 
 .image-link {
@@ -116,45 +133,6 @@ a:active {
     transition: 0.5s;
 }
 
-
-
-/* text-elements */
-
-p {
-    /* background: lightblue; */
-    max-width: 40rem;
-    border-radius: 3px;
-}
-
-.tooltip { /*tooltip styling modified from w3schools.com/css/css_tooltip.asp */
-    position: relative;
-    display: inline;
-    color: rgba(0, 0, 255, 1);
-}
-
-.tooltip .tooltiptext { /* Tooltip text */
-    visibility: hidden;
-    background-color: white;
-    color: #fff;
-    padding: 1rem;
-    border-radius: 6px;
-
-    position: absolute;
-    z-index: 1;
-    top: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.tooltip:hover .tooltiptext { /* Show the tooltip text when you mouse over the tooltip container */
-    display: inline;
-    visibility: visible;
-    transition: 1s;
-    background: black;
-}
-
-/* combined elements */
-
 .overlay {
     position: absolute;
     width: 16rem;
@@ -165,56 +143,112 @@ p {
     left: 0;
 }
 
+.overlay:hover {
+    background: rgba($interact, 0.8);
+}
+
 .image-link-container:hover .image-link{
     object-position: 100% 50%;
     transition: 1s;
 }
 
-.image-link-container:hover .overlay-all{
-    background: rgba(116, 57, 18, 0.25);
+
+
+@media (min-width: 760px) {
+    /* header */
+
+    .signature {
+        text-align: left;
+    }
+
+    .signature > * {
+        padding: 0 1rem;
+        margin: 0;
+    }
+
+    /* .dropdown-item {
+        text-align: center;
+    } */
+
+
+
+
+
+    /* text-elements */
+
+    p {
+        /* background: lightblue; */
+        max-width: 40rem;
+        border-radius: 3px;
+    }
+
+    .tooltip { /*tooltip styling modified from w3schools.com/css/css_tooltip.asp */
+        position: relative;
+        display: inline;
+        color: $interact;
+    }
+
+    .tooltip .tooltiptext { /* Tooltip text */
+        visibility: hidden;
+        background-color: white;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 6px;
+
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+    }
+
+    .tooltip:hover .tooltiptext { /* Show the tooltip text when you mouse over the tooltip container */
+        display: inline;
+        visibility: visible;
+        transition: 1s;
+        background: black;
+    }
+
+    /* combined elements */
+
+
+    // .image-link-container:hover .overlay-all{
+    //     background: rgba(116, 57, 18, 0.25);
+    // }
+
+    // .image-link-container:hover .overlay-frontend{
+    //     background: rgba(0, 0, 255, 0.25);
+    // }
+
+    // .image-link-container:hover .overlay-game{
+    //     background: rgba(0, 255, 0, 0.25);
+    // }
+
+    // .image-link-container:hover .overlay-backend{
+    //     background: rgba(255, 0, 0, 0.25);
+    // }
+
+    .selection, .nav-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* sort later */
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-around;
+    }
+
+    .about h2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hidden {
+        display: none;
+        position: absolute;
+        transition: 1s;
+    }
 }
 
-.image-link-container:hover .overlay-frontend{
-    background: rgba(0, 0, 255, 0.25);
-}
-
-.image-link-container:hover .overlay-game{
-    background: rgba(0, 255, 0, 0.25);
-}
-
-.image-link-container:hover .overlay-backend{
-    background: rgba(255, 0, 0, 0.25);
-}
-
-.selection, .nav-main {
-    display: flex;
-    flex-direction: column;
-}
-
-#all-select {
-    color: rgba(116, 57, 18, 1);
-}
-
-#frontend-select {
-    color: rgba(0, 0, 255, 1);
-}
-
-#backend-select {
-    color: rgba(255, 0, 0, 1);
-}
-
-#game-select {
-    color: rgba(0, 255, 0, 1);
-}
-
-/*  */
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-}
-
-.about h2 {
-    margin: 0;
-    padding: 0;
-}

@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriele Dal Cengio - Style Guide</title>
 
     <link href="css/normalize.css" rel="stylesheet">
@@ -15,68 +16,65 @@
     <div class="grid-wrapper">
         <!-- header -->
         <header class="signature">
-            <h1>gabe</h1>
+            <h1><a href="index.html" class="nav-button">gabe</a></h1>
             <p>full stack software engineer</p>
         </header>
         <nav class="nav-main">
-            <a class="nav-button" href="about.html">
+            <a class="nav-button link" href="about.html">
                 about
             </a>
-            <a class="nav-button" href="index.html">
+            <a class="nav-button link" href="index.html">
                 projects
             </a>
-            <a class="nav-button" href="resume.pdf" target="_blank">
+            <a class="nav-button link" href="resume.pdf" target="_blank">
                 resume
             </a>
             <h4 class="heading">contact</h4>
-            <a class="nav-button" href="mailto:gdalceng@sfu.ca" target="_top">
+            <a class="nav-button link" href="mailto:gdalceng@sfu.ca" target="_top">
                 email
             </a>
-            <a class="nav-button" href="https://www.linkedin.com/in/gabriele-dal-cengio-61a188144">
+            <a class="nav-button link" href="https://www.linkedin.com/in/gabriele-dal-cengio-61a188144">
                 linkedIn
             </a>
-            <a class="nav-button" href="https://github.com/lazygeb">
+            <a class="nav-button link" href="https://github.com/lazygeb">
                 github
             </a>
         </nav>
 
         <!-- project cards -->
-        <section class="card-wrapper flex">
-            <div class="image-link-container">
+        <section class="card-wrapper flex" id="projects">
+            <div class="image-link-container game">
                 <img src="img/thumb_resurgence.jpg" alt="IAT 410 - Game Design Final Project: resurgence" class="image-link">
-                <a href="projects/resurgence.html" class="overlay overlay-game">resurgence</a>
+                <a href="projects/resurgence.html" class="overlay overlay-game"><h4>resurgence</h4></a>
             </div>
-            <div class="image-link-container">
+            <div class="image-link-container mix frontend backend game design">
                 <img src="img/thumb_chip8.JPG" alt="CMPT 276 - Intro to Software Engineering Final Project: Chip-8 Emulator" class="image-link">
-                <a href="projects/chip8.html" class="overlay overlay-all">chip-8 emulator</a>
+                <a href="projects/chip8.html" class="overlay overlay-all"><h4>chip-8 emulator</h4></a>
             </div>
-            <div class="image-link-container">
+            <div class="image-link-container game">
                 <img src="img/thumb_resurgence.jpg" alt="this is an example image" class="image-link">
-                <a href="https://www.google.com" class="overlay overlay-backend">TEST TITLE</a>
+                <a href="https://www.google.com" class="overlay overlay-backend"><h4>resurgence</h4></a>
             </div>
-            <div class="image-link-container">
+            <div class="image-link-container game">
                 <img src="img/thumb_resurgence.jpg" alt="this is an example image" class="image-link">
-                <a href="https://www.google.com" class="overlay overlay-game">TEST TITLE</a>
+                <a href="https://www.google.com" class="overlay overlay-game"><h4>resurgence</h4></a>
             </div>
-            <div class="image-link-container">
+            <div class="image-link-container game">
                 <img src="img/thumb_resurgence.jpg" alt="this is an example image" class="image-link">
-                <a href="https://www.google.com" class="overlay overlay-frontend">TEST TITLE</a>
+                <a href="https://www.google.com" class="overlay overlay-frontend"><h4>resurgence</h4></a>
             </div>
         </section>
 
         <!-- project cards selection -->
         <aside class="selection">
-            <p class="nav-button" id="all-select">show all</p>
-            <p class="nav-button" id="frontend-select">frontend</p>
-            <p class="nav-button" id="backend-select">backend</p>
-            <p class="nav-button" id="design-select">design</p>
-            <p class="nav-button" id="game-select">games</p>
+            <p class="nav-button link" id="all-select" onclick="showAll()">show all</p>
+            <p class="nav-button link" id="all-select" onclick="filterSelection('mix')">mixed</p>
+            <p class="nav-button link" id="frontend-select" onclick="filterSelection('frontend')">frontend</p>
+            <p class="nav-button link" id="backend-select" onclick="filterSelection('backend')">backend</p>
+            <p class="nav-button link" id="design-select" onclick="filterSelection('design')">design</p>
+            <p class="nav-button link" id="game-select" onclick="filterSelection('game')">games</p>
         </aside>
-
     </div>
-
-
-
- 
+    <script src="filter.js"></script>
 </body>
 </html>
