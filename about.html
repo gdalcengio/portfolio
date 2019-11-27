@@ -10,16 +10,18 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <script src="hamburger.js"></script>
 </head>
 
 <body>
     <div class="grid-wrapper">
         <!-- header -->
         <header class="signature">
+            <img src="img/hamburger_icon.jpg" alt="hamburger icon to open up the nav menu" id="hamburger" onclick="toggleMenu()">
             <h1><a href="index.html" class="nav-button">gabe</a></h1>
             <p>full stack software engineer</p>
         </header>
-        <nav class="nav-main">
+        <nav class="nav-main" id="nav-main">
             <a class="nav-button link" href="about.html">
                 about
             </a>
@@ -38,6 +40,9 @@
             </a>
             <a class="nav-button link" href="https://github.com/lazygeb">
                 github
+            </a>
+            <a class="nav-button link" href="styleguide.html">
+                style guide
             </a>
         </nav>
 

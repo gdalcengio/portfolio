@@ -174,6 +174,15 @@ a:visited {
     margin: 1rem auto;
 }
 
+.image-link-container h4 {
+    color: white;
+    	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
 .image-link {
     width: $box-size;
     height: $box-size;
