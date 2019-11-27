@@ -4,35 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriele Dal Cengio - Style Guide</title>
+    <title>Gabriele Dal Cengio</title>
 
     <link href="css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">
-    <!-- <link href="css/grid.css" rel="stylesheet"> -->
+    <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="sg">
     <header>
-        <p>Gabriele Dal Cengio</p>
-        <p>301303147</p>
-
-
         <nav class="nav-main">
             <h1 class="heading">Portfolio Style Guide</h1>
-            <a href="#interactive_elements" class="nav-button">
+            <a href="#interactive_elements" class="nav-button link">
                 Interactive Elements
             </a>
-            <a href="#text_elements" class="nav-button">
+            <a href="#text_elements" class="nav-button link">
                 Text Elements
             </a>
-            <a href="#combined_elements" class="nav-button">
+            <a href="#combined_elements" class="nav-button link">
                 Combined Elements
             </a>
-            <a href="project_template.html" class="nav-button">
+            <a href="project_template.html" class="nav-button link">
                 Project Template
             </a>
-            <a href="#citations" class="nav-button">
+            <a href="#citations" class="nav-button link">
                 Citations
             </a>
         </nav>
@@ -48,16 +44,16 @@
         <section class="element">
             <h3>In-text link</h3>
             <h4>CSS selector:</h4>
-            <p>a{}</p>
+            <p>.link </p>
 
             <h4>Sample code:</h4>
             <code>
-            &lt;p&gt;this is normal p&lt;a href="www.google.com"&gt;click here for an in-text link &lt;/a&gt; this is normal p&lt;/p&gt;
+            &lt;p&gt;this is normal p click&lt;a href="www.google.com" class="link"&gt;here &lt;/a&gt;for an in-text link&lt;/p&gt;
         </code>
 
             <h4>Rendered element:</h4>
 
-            <p>start of p <a href="">click here for an in-text link</a> end of p </p>
+            <p>start of p click <a href="" class="link">here</a> for an in-text link end of p </p>
         </section>
 
 
@@ -67,12 +63,12 @@
             <h3>Navigation Link</h3>
 
             <h4>CSS selector:</h4>
-            <p>.button-nav{}</p>
+            <p>.button-nav .link</p>
 
             <h4>Sample code:</h4>
             <code>
                 <pre>
-                    &lt;a class="button-nav" href="#"&gt;
+                    &lt;a class="button-nav link" href="#"&gt;
                         Link To Section
                     &lt;/a&gt;
                 </pre>
@@ -80,62 +76,27 @@
 
             <h4>Rendered element:</h4>
             <a href="#">
-                <p class="nav-button">
+                <p class="nav-button link">
                     Link To Section
                 </p>
             </a>
         </section>
 
-        <!-- Dropdown styling -->
-        <section class="element">
-            <h3>Dropdown Input</h3>
-
-            <h4>CSS selector:</h4>
-            <p>.dropdown</p>
-
-            <h4>Sample code:</h4>
-            <code>
-                <pre>
-&lt;select name="categories" class="dropdown"&gt;
-    &lt;option value="all"&gt;all&lt;/option&gt;
-    &lt;option value="web development"&gt;web development&lt;/option&gt;
-    &lt;option value="software engineering"&gt;software engineering&lt;/option&gt;
-    &lt;option value="game design"&gt;game design&lt;/option&gt;
-    &lt;option value="creative"&gt;creative&lt;/option&gt;
-&lt;/select&gt;
-                </pre>
-            </code>
-            
-            <h4>Rendered element:</h4>
-            <select name="categories" class="dropdown">
-                <option value="all" class="dropdown-item">all</option>
-                <option value="web development" class="dropdown-item">web development</option>
-                <option value="software engineering" class="dropdown-item">software engineering</option>
-                <option value="game design" class="dropdown-item">game design</option>
-                <option value="creative" class="dropdown-item">creative</option>
-            </select>
-        </section>
-
         <!-- images as link -->
         <section class="element">
-            <h3>Image as Link</h3>
+            <h3>Image as Link To Project</h3>
             <h4>CSS selector:</h4>
             <p>.image-link-container .image-link .image-overlay</p>
 
             <h4>Sample code:</h4>
             <code>
                 <pre>
-&lt;img src="img/sbnight3.jpg" alt="this is an example image"&gt;
-&lt;a href="https://www.google.com" class="image-link"&gt;
-&lt;div class="image-overlay"&gt;&lt;/div&gt;
-&lt;/a&gt;
+                    &lt;img src="img/thumb_resurgence.jpg" alt="IAT 410 - Game Design Final Project: resurgence" class="image-link"&gt;
                 </pre>
             </code>
 
             <h4>Rendered element:</h4>
-            <a href="#">
-                <img src="img/thumb_resurgence.jpg" alt="this is an example image" class="image-link">
-            </a>
+                <img src="img/thumb_resurgence.jpg" alt="IAT 410 - Game Design Final Project: resurgence" class="image-link">
         </section>
     </section>
     <!-- // INTERACTIVE ELEMENTS SECTION -->
@@ -150,36 +111,36 @@
         <section class="element">
             <h3>Headings</h3>
             <h4>CSS selector:</h4>
-            <p>.heading</p>
+            <p>h tags</p>
 
             <h4>Sample code:</h4>
             <code>
-        <pre>
-            &lt;h1 class="heading"&gt; text here &lt;/h1&gt;
-            &lt;h2 class="heading"&gt; text here &lt;/h2&gt;
-            &lt;h3 class="heading"&gt; text here &lt;/h3&gt;
-            &lt;h4 class="heading"&gt; text here &lt;/h4&gt;
-        </pre>
-        </code>
+                <pre>
+                    &lt;h1&gt; text here &lt;/h1&gt;
+                    &lt;h2&gt; text here &lt;/h2&gt;
+                    &lt;h3&gt; text here &lt;/h3&gt;
+                    &lt;h4&gt; text here &lt;/h4&gt;
+                </pre>
+            </code>
 
             <h4>Rendered element:</h4>
 
-            <h1 class="heading">header 1</h1>
-            <h2 class="heading">header 2</h2>
-            <h3 class="heading">header 3</h3>
-            <h4 class="heading">header 4</h4>
+            <h1>header 1</h1>
+            <h2>header 2</h2>
+            <h3>header 3</h3>
+            <h4>header 4</h4>
         </section>
 
         <section class="element">
             <h3>Paragraphs</h3>
             <h4>CSS selector:</h4>
-            <p>p{}</p>
+            <p>p</p>
 
             <h4>Sample code:</h4>
             <code>
-            <pre>
-&lt;p&gt;the paragraph goes here&lt;/p&gt;
-            </pre>
+                <pre>
+                    &lt;p&gt;the paragraph goes here&lt;/p&gt;
+                </pre>
             </code>
 
             <h4>Rendered element:</h4>
@@ -236,7 +197,7 @@
         <h4>Sample code:</h4>
         <code>
             <pre>
-&lt;span class="tooltip"&gt;tooltip&lt;span class="tooltiptext"&gt;a more detailed glance&lt;/span&gt;&lt;/span&gt;
+                &lt;span class="tooltip"&gt;tooltip&lt;span class="tooltiptext"&gt;a more detailed glance&lt;/span&gt;&lt;/span&gt;
             </pre>
         </code>
 
@@ -262,71 +223,83 @@
             <h4>Sample code:</h4>
             <code>
                 <pre>
-                    &lt;header class="nav-header"&gt;
-                        &lt;div&gt;
-                            &lt;h1 class="heading"&gt;Dusk&lt;/h1&gt;
-                        &lt;/div&gt;
-                        &lt;nav class="nav-main"&gt;
-                            &lt;a class="button-nav" href="#"&gt;
-                                first nav item
-                            &lt;/a&gt;
-                            &lt;a class="button-nav" href="#"&gt;
-                                second nav item
-                            &lt;/a&gt;
-                            &lt;a class="button-nav" href="#"&gt;
-                                third nav item
-                            &lt;/a&gt;
-                            &lt;a class="button-nav" href="#"&gt;
-                                fourth nav item
-                            &lt;/a&gt;
-                        &lt;/nav&gt;
-                    &lt;/header&gt;
+                    &lt;nav class="nav-main"&gt;
+                        &lt;a class="nav-button link" href="about.html"&gt;
+                            about
+                        &lt;/a&gt;
+                        &lt;a class="nav-button link" href="index.html"&gt;
+                            projects
+                        &lt;/a&gt;
+                        &lt;a class="nav-button link" href="resume.pdf" target="_blank"&gt;
+                            resume
+                        &lt;/a&gt;
+                        &lt;h4 class="heading"&gt;contact&lt;/h4&gt;
+                        &lt;a class="nav-button link" href="mailto:gdalceng@sfu.ca" target="_top"&gt;
+                            email
+                        &lt;/a&gt;
+                        &lt;a class="nav-button link" href="https://www.linkedin.com/in/gabriele-dal-cengio-61a188144"&gt;
+                            linkedIn
+                        &lt;/a&gt;
+                        &lt;a class="nav-button link" href="https://github.com/lazygeb"&gt;
+                            github
+                        &lt;/a&gt;
+                        &lt;a class="nav-button link" href="styleguide.html"&gt;
+                            style guide
+                        &lt;/a&gt;
+                    &lt;/nav&gt;
                 </pre>
             </code>
 
             <h4>Rendered element:</h4>
-            <header class="nav-header">
-                <div class="signature">
-                    <h1>gabe</h1>
-                    <p>full stack software engineer</p>
-                </div>
-                <nav class="nav-main">
-                    <a class="nav-button" href="#">
-                        first nav item
-                    </a>
-                    <a class="nav-button" href="#">
-                        second nav item
-                    </a>
-                    <a class="nav-button" href="#">
-                        third nav item
-                    </a>
-                    <a class="nav-button" href="#">
-                        fourth nav item
-                    </a>
-                </nav>
-            </header>
+            <nav class="nav-main">
+                <a class="nav-button link" href="about.html">
+                    about
+                </a>
+                <a class="nav-button link" href="index.html">
+                    projects
+                </a>
+                <a class="nav-button link" href="resume.pdf" target="_blank">
+                    resume
+                </a>
+                <h4 class="heading">contact</h4>
+                <a class="nav-button link" href="mailto:gdalceng@sfu.ca" target="_top">
+                    email
+                </a>
+                <a class="nav-button link" href="https://www.linkedin.com/in/gabriele-dal-cengio-61a188144">
+                    linkedIn
+                </a>
+                <a class="nav-button link" href="https://github.com/lazygeb">
+                    github
+                </a>
+                <a class="nav-button link" href="styleguide.html">
+                    style guide
+                </a>
+            </nav>
         </section>
 
-        <!-- images as link -->
         <section class="element">
-            <h3>Project Card</h3>
+            <h3>Image as Link To Project</h3>
             <h4>CSS selector:</h4>
-            <p>.image-link-container .image-link .imagelink-tags .col-1of3 .low|.high|.creative</p>
-
+            <p>.image-link-container .image-link .overlay .overlay-game .overlay-frontend etc... </p>
+        
             <h4>Sample code:</h4>
             <code>
                 <pre>
-&lt;img src="img/sbnight3.jpg" alt="this is an example image"&gt;
-&lt;a href="https://www.google.com" class="image-link"&gt;
-&lt;div class="image-overlay"&gt;&lt;/div&gt;
-&lt;/a&gt;
+                    &lt;div class="image-link-container game"&gt;
+                        &lt;img src="img/thumb_resurgence.jpg" alt="IAT 410 - Game Design Final Project: resurgence" class="image-link"&gt;
+                        &lt;a href="projects/resurgence.html" class="overlay overlay-game"&gt;
+                            &lt;h4&gt;resurgence&lt;/h4&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
                 </pre>
             </code>
-
+        
             <h4>Rendered element:</h4>
-            <div class="image-link-container">
-                <img src="img/thumb_resurgence.jpg" alt="this is an example image" class="image-link">
-                <a href="https://www.google.com" class="overlay">TEST TITLE</a>
+            <div class="image-link-container game">
+                <img src="img/thumb_resurgence.jpg" alt="IAT 410 - Game Design Final Project: resurgence" class="image-link">
+                <a href="projects/resurgence.html" class="overlay overlay-game">
+                    <h4>resurgence</h4>
+                </a>
             </div>
         </section>
     </section>
@@ -352,24 +325,35 @@
         </p>
     </section>
 
+    <section id="colors">
+        <h2>color palette</h2>
+        <p>accent color: #F19F4D</p>
+        <div class="sgaccent"></div>
+        <p>accent click color: #F9CF00</p>
+        <div class="sgaccent-down"></div>
+        <p>neutral grey color: #D9D9D9</p>
+        <div class="sgneutral"></div>
+        <p>interaction color: #4484CE</p>
+        <div class="sginteract"></div>
+    </section>
+
     <section id="citations">
         <h2>Citations</h2>
-
         <ul>
             <li>Steve Matteson. Designer. <strong>Open Sans [Font]</strong>. Retrieved from <a
                 href="https://fonts.google.com/specimen/Open+Sans">https://fonts.google.com/specimen/Open+Sans</a>
             </li>
             <li>Vernon Adams. Designer. 2014. <strong>Maven Pro [Font]</strong>. Retrieved from <a
                 href="https://fonts.google.com/specimen/Nunito">https://fonts.google.com/specimen/Nunito</a>
-            </li> -->
-            <!-- <li>Unknown. Photographer. <strong>Skateboarding at night [Image]</strong>. Retrieved from <a
-                    href="https://acnetheme.tumblr.com/post/29259252662">https://acnetheme.tumblr.com/post/29259252662</a>
-            </li> -->
+            </li>
         </ul>
     </section>
 </body>
 </html>
 
+
+
+<!-- project description guideline for future use -->
 
 <!-- 
 beginning why are you doing this
