@@ -1,3 +1,11 @@
+// scss variables
+$accent: #F1592B;
+$accent-down: #F9CF00;
+$neutral: #D9D9D9;
+$interact: rgb(86, 120, 168);
+
+$box-size: 12rem;
+
 /* set up */
 * {
   box-sizing: border-box;
@@ -29,18 +37,16 @@ p {
     line-height: 150%;
 } 
 
+figcaption {
+    font-size: .8em;
+    color: $accent-down;
+}
+
 .limit {
     max-width:100%;
     max-height:100%;
 }
 
-// scss variables
-$accent: #F1592B;
-$accent-down: #F9CF00;
-$neutral: #D9D9D9;
-$interact: rgb(86, 120, 168);
-
-$box-size: 12rem;
 
 
 // 

@@ -46,42 +46,49 @@
         <!-- project cards -->
         <section class="card-wrapper">
             <div class="about">
-                <h2>VAN STREET EATS</h2>
-                <p>internet computing technologies final project</p>
+                <h2>van street eats</h2>
+                <p>internet computing technologies final project | fall 2019</p>
 
                 <img src="../img/thumb_vanstreeteats.jpg" class="limit" alt="final project">
+                <figcaption>screenshot of final listing page</figcaption>
                 
                 <h3>context</h3>
-                <p>For a semester long final project, we were tasked to create a dynamic website using php, mySQL and AJAX technologies. Our requirements were that users must be able to sign up and sign in with encrypted passwords and that we displayed linkable cards from a list page. On this list page, the content cards must have a way to categorize initially and a way to filter further. Finally we were to document the ER diagram, coding process and features in the final report shown below.
+                <p>For a semester long final project, we were tasked to create a dynamic website using php, mySQL and AJAX technologies. Our requirements were that users must be able to sign up and sign in with encrypted passwords and that we displayed linkable cards from a list page. On this list page, the content cards must have a way to categorize initially and a way to filter further. 
                 </p>
+                <!-- <img src="../img/vse_signup.JPG" alt="vancouver street eats sign up page">
+                <figcaption>user sign up page</figcaption> -->
                 <!-- <p>Click here to try it out  <a href="">here</a>. </p> -->
-                <iframe width="720" height="540" src="../352report.pdf"></iframe>
+                <!-- <iframe width="720" height="540" src="../352report.pdf"></iframe> -->
                 
-                <!-- <h3>process</h3>
-                <p>We began by exploring the different genres and ideas for games that we could make. We decided on the idea of a
-                    character being able to travel through electric current or water. This was scrapped after brainstorming and fleshing
-                    out the idea further. We agreed on a puzzle game involving two characters, one with abilities based on the element
-                    of earth and one of water. We then started experimenting with the main characters, fine tuning their physics and
-                    abilities until they felt fluid. The first issue that arose was how to deal with and maintain physics between the
-                    player, their abilities and objects. Through weeks of iteration and bug testing we tweaked the gameplay, then built
-                    out levels, enemy behaviour, game structure and then the boss battle.</p>
-                <img src="../img/iat410_1.jpg" class="limit" alt="first iteration, testing">
+                <h3>process</h3>
+                <h4>database design</h4>
+                <img src="../img/vse_db.JPG" class="limit" alt="database design">
+                <figcaption>entity-relationship diagram design</figcaption>
+                <p>I first created a simple database schema with 3 tables. In the vendors table, we have the superkey ‘id’. This auto increments with each added and is a way to keep this table organized easily. The rest of the attributes are general strings except for rating. Rating ties into the review table and will always only be 0 - 5. One of which contains all the data relating to the street vendors, another containing user information and the last containing all review information. In the Reviews table, I demonstrated the concept of one to many between the relationships. The users table contains all information about a registered user. Its primary key is username as none are allowed to be the same. There’s a hashed password, full name, email to soft prevent filling the database with spam. This table is connected to the other two via relationships “likes” and “reviewedBy”. The like relationship is for homepage customization and the reviewedBy table is for displaying the reviews on the webpage. (initial names are slightly different than the ones in the final database)</p>
+
+                <h4>dynamic content</h4>
+                <img src="../img/vse_listing.JPG" class="limit" alt="content page">
+                <figcaption>dynamically generated content page from database</figcaption>
+                <p>I first created a page to list all of the vendors from my database (first image shown above). When a user clicks on one of the content cards on the listing page , then they will be taken to a custom page like this. The card brings the user to the content.php url and appends the primary key of the vendor using the HTTP method GET. Looking back I would redesign this page first.</p>
+
+                <h4>user functionality</h4>
+                <img src="../img/vse_signup.JPG" class="limit" alt="sign up page">
+                <figcaption>sign up page that will register users with valid information into the user table</figcaption>
+                <p>I then went on to create the user sign up functionality. All data in the semantically marked up form is unable to submit unless the data is valid. When the user enters valid information, the user data is registered and they will be able to login. I did not find too much difficulty at this part. </p>
+
+                <img src="../img/vse_change.JPG" class="limit" alt="change information page">
+                <figcaption>user information edit page</figcaption>
+                <p>Once they have logged in, they are able to edit their information. Submitting this edit form will change any attributes specified.</p>
+
                 
                 <h3>what i've learned</h3>
-                <p>I am very proud of the outcome. We've created a full, midcore video game from scratch in which two people can
-                    cooperate together and have a good time. Through this experience, I've gained further practice in game design, User
-                    Experience design, and logical programming management skills. Our team really focused on having this game accessible
-                    to a wide audience. For those who don't game as much, we needed to focus and heavily experiment with tutorials and
-                    interaction points. As this is the biggest project I've worked on from the start, I needed to heavily organize it
-                    constantly. Because of this organization, my programming teammate and I were able to consistently work on production
-                    with the least amount of code conflicts.</p>
-                <img src="../img/iat410_2.jpg" class="limit" alt="maybe a team photo or something ">
-            </div> -->
+                <p>I really enjoyed how much I’ve learned in this project, having the interaction between front end and databases gave me the practical knowledge I needed to create similar, more refined projects. I had a bit of a struggle making sure that my query strings were consistent. They constantly had bugs and that is where I spent the most time. I enjoyed jquery very much and will be using it much more in the future. Another challenge I had was the overall ux. I need to get better and iterate quicker when designing websites. I’m satisfied as this was a first attempt, but there are many areas I could improve. The most important area I found was modularization of code. Since I did not quite understand php at the start, I wrote spaghetti code. If I were to redo this project, I’d modularize it from the start to keep it plenty organized.</p>
+                <img src="../img/vse_helper.JPG" class="limit" alt="">
+                <figcaption>generic helper functions to aid in connectivity to database</figcaption>
+            </div>
         </section>
 
         <aside class="selection">
-            <h3>my roles</h3>
-            <p>This was a solo project. Therefore, I designed the website, marked it up, connected it to my database and everything else on my own. </p>
             <h3>technical skills</h3>
             <ul>
                 <li>PHP</li>
@@ -89,6 +96,12 @@
                 <li>SQL</li>
                 <li>AJAX technologies</li>
             </ul>
+
+            <h3>my roles</h3>
+            <p>This was a solo project. Therefore, I designed the website, marked it up, connected it to my database and everything else on my own. </p>
+
+            <h3>team members</h3>
+            <p>none</p>
         </aside>
 
     </div>
