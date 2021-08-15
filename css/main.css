@@ -84,16 +84,39 @@ figcaption {
   width: 100%;
 }
 
-.signature > * {
+.sig-link {
+  color: #222;
+  display: inline-block;
   padding: 0;
-  margin: 0;
 }
 
-.signature h1 {
+.sig-link > *{
+  color: #222;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.sig-link:visited > * {
+  color: #222;
+}
+
+.sig-link:hover > * {
+  color: #666;
+  padding-left: 1.5rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+/* .signature > * {
+  padding: 0;
+  margin: 0;
+} */
+
+/* .signature h1 {
   display: inline-block;
   padding: 0;
   margin: 0;
-}
+} */
 
 a {
   text-decoration: none;
@@ -104,16 +127,16 @@ a {
   transition: 0.7s;
 }
 
-a:visited {
-  color: black;
-}
-
 /* interactive elements */
 .link {
   text-decoration: none;
   color: #F1592B;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+}
+
+.link:visited {
+  color: #F1592B;
 }
 
 .link:hover {
@@ -126,9 +149,6 @@ a:visited {
   color: #F9CF00;
 }
 
-.link:visited {
-  color: #F1592B;
-}
 
 .selection {
   display: none;
@@ -151,17 +171,19 @@ a:visited {
 
 .nav-button {
   display: block;
-  padding: .5rem 1rem;
-  -webkit-transform: none;
-          transform: none;
+  padding: 1rem 1rem;
+  /* -webkit-transform: none;
+          transform: none; */
   -webkit-transition: .25s;
   transition: .25s;
 }
 
 .nav-button:hover {
   position: relative;
-  -webkit-transform: translate(0px, -5px);
-          transform: translate(0px, -5px);
+  padding: 1rem 1rem;
+  padding-left: 2rem;
+  /* -webkit-transform: translate(5px, 0px);
+          transform: translate(5px, 0px); */
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -169,8 +191,8 @@ a:visited {
 
 .nav-button:focus {
   position: relative;
-  -webkit-transform: translate(0px, 1px);
-          transform: translate(0px, 1px);
+  /* -webkit-transform: translate(0px, 1px);
+          transform: translate(0px, 1px); */
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -196,7 +218,10 @@ a:visited {
 
 .image-link-container h4 {
   color: white;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000,
+ 1px -1px 0 #000,
+ -1px 1px 0 #000,
+ 1px 1px 0 #000;
 }
 
 .image-link {

@@ -7,7 +7,10 @@
     <title>Gabriele Dal Cengio</title>
 
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:wght@300|Open+Sans&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans&display=swap" rel="stylesheet"> 
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <script src="hamburger.js"></script>
@@ -17,21 +20,26 @@
     <div class="grid-wrapper">
         <!-- header -->
         <header class="signature">
-            <img src="img/hamburger_icon.jpg" alt="hamburger icon to open up the nav menu" id="hamburger" onclick="toggleMenu()">
-            <h1><a href="index.html" class="nav-button">gabe</a></h1>
-            <p>full stack software engineer</p>
+            <!-- <img src="img/hamburger_icon.jpg" alt="h`amburger icon to open up the nav menu" id="hamburger" onclick="toggleMenu()"> -->
+            <a href="index.html" class="sig-link">
+                <h1>Gabriele Dal Cengio</h1>
+                <p>Full Stack Developer</p>
+            </a>
         </header>
         <nav class="nav-main" id="nav-main">
-            <a class="nav-button link" href="about.html">
+            <!-- <a class="nav-button link" href="about.html">
                 about me
             </a>
             <a class="nav-button link" href="index.html">
                 projects
-            </a>
+            </a> -->
+
+            <!-- to be replaced with actual short summary -->
+
+            <!-- <h4 class="heading">contact</h4> -->
             <a class="nav-button link" href="resume.pdf" target="_blank">
                 resume
             </a>
-            <h4 class="heading">contact</h4>
             <a class="nav-button link" href="mailto:gdalceng@sfu.ca" target="_top">
                 email
             </a>
@@ -45,23 +53,23 @@
 
         <!-- project cards -->
         <section class="card-wrapper flex" id="projects">
-            <div class="image-link-container mix backend">
+            <div class="image-link-container">
                 <img src="img/thumb_constelation.jpg" alt="van street eat web app" class="image-link">
                 <a href="projects/syshacks.html" class="overlay"><h4>const-elation syshacks 2020</h4></a>
             </div>
-            <div class="image-link-container frontend design">
+            <div class="image-link-container">
                 <img src="img/thumb_alphamensae.jpg" alt="retirement business for my father" class="image-link">
                 <a href="projects/alphamensae.html" class="overlay"><h4>alpha mensae publishing inc.</h4></a>
             </div>
-            <div class="image-link-container mix frontend backend design">
+            <div class="image-link-container">
                 <img src="img/thumb_vanstreeteats.jpg" alt="van street eat web app" class="image-link">
                 <a href="projects/vanstreeteats.html" class="overlay"><h4>van street eats</h4></a>
             </div>
-            <div class="image-link-container game">
+            <div class="image-link-container">
                 <img src="img/thumb_resurgence.jpg" alt="IAT 410 - Game Design Final Project: resurgence" class="image-link">
                 <a href="projects/resurgence.html" class="overlay"><h4>resurgence</h4></a>
             </div>
-            <div class="image-link-container mix frontend backend game design">
+            <div class="image-link-container">
                 <img src="img/thumb_chip8.JPG" alt="CMPT 276 - Intro to Software Engineering Final Project: Chip-8 Emulator" class="image-link">
                 <a href="projects/chip8.html" class="overlay"><h4>chip-8 emulator</h4></a>
             </div>
@@ -75,17 +83,16 @@
                 <a href="https://www.google.com" class="overlay overlay-frontend"><h4>resurgence</h4></a>
             </div>              this is a template for efficiency-->              
         </section>
-        <!-- <p>(last redesigned in 2018)</p> -->
-
-        <!-- project cards selection -->
-        <aside class="selection">
+        
+        <!-- project cards selection (outdated, didn't like this, will delete)-->
+        <!-- <aside class="selection">
             <p class="nav-button link" id="all-select" onclick="showAll()">show all</p>
-            <!-- <p class="nav-button link" id="all-select" onclick="filterSelection('mix')">mixed</p> -->
+            <p class="nav-button link" id="all-select" onclick="filterSelection('mix')">mixed</p>
             <p class="nav-button link" id="frontend-select" onclick="filterSelection('frontend')">frontend</p>
             <p class="nav-button link" id="backend-select" onclick="filterSelection('backend')">backend</p>
             <p class="nav-button link" id="design-select" onclick="filterSelection('design')">design</p>
             <p class="nav-button link" id="game-select" onclick="filterSelection('game')">games</p>
-        </aside>
+        </aside> -->
     </div>
     <script src="filter.js"></script>
 </body>
