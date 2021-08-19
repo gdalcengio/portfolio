@@ -209,49 +209,62 @@ a {
 
 .image-link-container {
   position: relative;
+  width: 100%;
+  height: 14rem;
+  /*
   width: 12rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 1rem auto;
+  */
+  margin: 1rem auto; 
 }
 
 .image-link-container h4 {
+  position: absolute;
+  padding: 2rem;
   color: white;
+  bottom: 0;
+  /* 
   text-shadow: -1px -1px 0 #000,
  1px -1px 0 #000,
  -1px 1px 0 #000,
- 1px 1px 0 #000;
+ 1px 1px 0 #000; */
 }
 
 .image-link {
-  width: 12rem;
-  height: 12rem;
+  object-fit: cover;
+  /* object-position: 50% 50%; */
+  width: 100%;
+  height: inherit;
+  /* width: 12rem;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 0% 50%;
-     object-position: 0% 50%;
+  */ 
+  -o-object-position: 50% 20%;
+     object-position: 50% 20%;
   border-radius: 3px;
   -webkit-transition: 0.5s;
-  transition: 0.5s;
+  transition: 0.5s; 
 }
 
 .overlay {
   position: absolute;
-  width: 12rem;
-  height: 12rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
   text-align: center;
   top: 0;
   left: 0;
 }
 
 .overlay:hover {
-  background: rgba(86, 120, 168, 0.9);
+  /* background: rgba(86, 120, 168, 0.9); */
 }
 
 .image-link-container:hover .image-link {
-  -o-object-position: 100% 50%;
-     object-position: 100% 50%;
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -323,7 +336,7 @@ a {
   }
   /* combined elements */
   .image-link-container {
-    margin: 1rem;
+    /* margin: 1rem; */
   }
   .selection, .nav-main {
     display: -webkit-box;
