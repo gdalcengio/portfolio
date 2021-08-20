@@ -29,6 +29,14 @@
     flex-wrap: wrap; */
 }
 
+.content-wrapper {
+    display: block;
+    padding: 1rem;
+    margin: 0 auto;
+    /* grid-column: col-start / span 12;
+    flex-wrap: wrap; */
+}
+
 /* tablet and smaller screens */
 /* @media (min-width: 500px) { */
     /* .nav-main {
@@ -64,6 +72,11 @@
     .card-wrapper {
         margin: 1rem;
         grid-column: col-start 4 / span 8;
+        grid-row: 2 / 4;
+    }
+    .content-wrapper {
+        margin: 1rem;
+        grid-column: col-start 4 / span 6;
         grid-row: 2 / 4;
     }
     .selection {

@@ -223,6 +223,7 @@ a {
 .image-link-container h4 {
   position: absolute;
   padding: 2rem;
+  margin: 0;
   color: white;
   bottom: 0;
   /* 
