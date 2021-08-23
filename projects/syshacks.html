@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriele Dal Cengio - Project: Const-elation</title>
 
+    <link rel="icon" href="../favicon.png">
     <link href="../css/normalize.css" rel="stylesheet">
     <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:wght@300|Open+Sans&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans&display=swap" rel="stylesheet"> 
     <link href="../css/grid.css" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet">
-    <script src="../hamburger.js"></script>
 </head>
 
 <body>
@@ -40,64 +40,65 @@
                 github
             </a>
         </nav>
-
+        
         <!-- content -->
         <section class="content-wrapper">
             <div class="about">
                 <h2>Syshacks 2020 | Const-elation</h2>
                 <p>Hackathon Project | July 2020</p>
-
+                
                 <!-- <iframe class="limit" width="560" height="315" src="https://www.youtube.com/embed/KSESUyTmlxs?autoplay=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <figcaption>Resurgence trailer, created by Kenneth Juang</figcaption> -->
-                <embed src="../vid/dio-demo.mp4" autostart="true" width="560" class="limit" height="315" />
-                <figcaption>Last instagram story of all submissions before shutting off the vm</figcaption>
-
-                <h3>Context</h3>
-                <p>SoSY Hackademia was a hackathon hosted on July 11th - 13th by SFU Software Systems Student Society. The focus of the hackathon was to make a website with the theme of ‘space’ in 2 days. </p>
-                <p>My partner Alvin and I began to brainstorm project ideas. We landed on an interactive canvas where one can draw and have their drawing sent to a community space to follow the goals of web 2.0. Each drawing is part of an n-body physics simulation as if they were constellations in a solar system.  </p>
-                <img src="../img/lewd-face.jpg" class="limit" alt="final project">
-                <figcaption>Initial canvas to submit drawing constellation</figcaption>
+                    <figcaption>Resurgence trailer, created by Kenneth Juang</figcaption> -->
+                    <embed src="../vid/dio-demo.mp4" autostart="true" width="560" class="limit" height="315" />
+                    <figcaption>Last instagram story of all submissions before shutting off the vm</figcaption>
+                    
+                    <h3>Context</h3>
+                    <p>SoSY Hackademia was a hackathon hosted on July 11th - 13th by SFU Software Systems Student Society. The focus of the hackathon was to make a website with the theme of ‘space’ in 2 days. </p>
+                    <p>My partner Alvin and I began to brainstorm project ideas. We landed on an interactive canvas where one can draw and have their drawing sent to a community space to follow the goals of web 2.0. Each drawing is part of an n-body physics simulation as if they were constellations in a solar system.  </p>
+                    <img src="../img/lewd-face.jpg" class="limit" alt="final project">
+                    <figcaption>Initial canvas to submit drawing constellation</figcaption>
+                    
+                    <h3>Process</h3>
+                    <p>As I was learning gcloud and using PHP for work, we decided on these technologies to create the project. In gcloud I set up an unnecessarily expensive compute engine with free trial credits to host the backend PHP code + save the user constellation/drawing. I also set up an SQL instance to hold the image names, image titles, and metadata attached. 
+                    </p>
+                    <img src="../img/sql-console.jpg" class="limit" alt="First working save of image title in SQL database">
+                    <figcaption>First working save of image title in SQL database</figcaption>
+                    <p>The PHP code saved the HTML5 canvas as a jpg on submit of the initial page. The second page pulled all image data as a JSON object. From there, the javascript reads these objects, displays the pictures and moves them around in the n-body simulation. Alvin took care of all  the physics code. 
+                    </p>
+                    <img src="../img/JSON-console.jpg" class="limit" alt="JSON console">
+                    <figcaption>Web console listing JSON objects returned</figcaption>
+                    
+                    <h3>What I've Learned</h3>
+                    <p>We’re really happy with how well it turned out and had lots of fun making this. We ended up winning the Instructor's Vote with a $25 gift card per person. We successfully followed the theme and created a working project that everyone could enjoy and contribute to during the presentation.</p>
+                    
+                    <p>There isn't much still available with the lack of documentation, but this is the page of the hackathon <a href="https://devpost.com/software/const-elation" class="link">here</a>. In the future I will make much more of an effort to document each phase of the project. </p>
+                </div>
+            </section>
+            
+            <aside class="selection">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>PHP</li>
+                    <li>javascript</li>
+                    <li>GCloud</li>
+                    <li>SQL</li>
+                </ul>
+                <h3>My Roles</h3>
+                <p>I essentially handled everything except for the physics simulation. This includes PHP to SQL code, image creation, and hosting. </p>
                 
-                <h3>Process</h3>
-                <p>As I was learning gcloud and using PHP for work, we decided on these technologies to create the project. In gcloud I set up an unnecessarily expensive compute engine with free trial credits to host the backend PHP code + save the user constellation/drawing. I also set up an SQL instance to hold the image names, image titles, and metadata attached. 
-                </p>
-                <img src="../img/sql-console.jpg" class="limit" alt="First working save of image title in SQL database">
-                <figcaption>First working save of image title in SQL database</figcaption>
-                <p>The PHP code saved the HTML5 canvas as a jpg on submit of the initial page. The second page pulled all image data as a JSON object. From there, the javascript reads these objects, displays the pictures and moves them around in the n-body simulation. Alvin took care of all  the physics code. 
-                </p>
-                <img src="../img/JSON-console.jpg" class="limit" alt="JSON console">
-                <figcaption>Web console listing JSON objects returned</figcaption>
+                <h3>Team Members</h3>
+                <ul>
+                    <li>Alvin David</li>
+                </ul>
                 
-                <h3>What I've Learned</h3>
-                <p>We’re really happy with how well it turned out and had lots of fun making this. We ended up winning the Instructor's Vote with a $25 gift card per person. We successfully followed the theme and created a working project that everyone could enjoy and contribute to during the presentation.</p>
-
-                <p>There isn't much still available with the lack of documentation, but this is the page of the hackathon <a href="https://devpost.com/software/const-elation" class="link">here</a>. In the future I will make much more of an effort to document each phase of the project. </p>
-            </div>
-        </section>
-
-        <aside class="selection">
-            <h3>Technical Skills</h3>
-            <ul>
-                <li>HTML5</li>
-                <li>PHP</li>
-                <li>javascript</li>
-                <li>GCloud</li>
-                <li>SQL</li>
-            </ul>
-            <h3>My Roles</h3>
-            <p>I essentially handled everything except for the physics simulation. This includes PHP to SQL code, image creation, and hosting. </p>
-
-            <h3>Team Members</h3>
-            <ul>
-                <li>Alvin David</li>
-            </ul>
-
-        </aside>
-
-    </div>
-
-
-
- 
-</body>
-</html>
+            </aside>
+            
+        </div>
+        
+        
+        
+        
+        <script src="../hamburger.js"></script>
+    </body>
+    </html>
