@@ -1,143 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gabriele Dal Cengio - Project: VanStreetEats</title>
 
-    <link rel="icon" href="../favicon.png">
-    <link href="../css/normalize.css" rel="stylesheet">
+    <link rel="icon" href="../favicon.png" />
+    <link href="../css/normalize.css" rel="stylesheet" />
     <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:wght@300|Open+Sans&display=swap" rel="stylesheet"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans&display=swap"
-        rel="stylesheet">
-    <link href="../css/grid.css" rel="stylesheet">
-    <link href="../css/main.css" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../css/grid.css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <div class="grid-wrapper">
-        <!-- header -->
-        <header class="signature">
-            <!-- <img src="img/hamburger_icon.jpg" alt="h`amburger icon to open up the nav menu" id="hamburger" onclick="toggleMenu()"> -->
-            <a href="../index.html" class="sig-link">
-                <h1>Gabriele Dal Cengio</h1>
-                <p>Full Stack Developer</p>
-            </a>
-        </header>
-        <nav class="nav-main" id="nav-main">
-            <a class="nav-button link" href="../GabrieleDalCengio_Resume.pdf" target="_blank">
-                resume
-            </a>
-            <a class="nav-button link" href="mailto:dalcengio.gabriele@gmail.com" target="_top">
-                email
-            </a>
-            <a class="nav-button link" href="https://www.linkedin.com/in/gabriele-dal-cengio-61a188144" target="_blank">
-                linkedIn
-            </a>
-            <a class="nav-button link" href="https://github.com/gdalcengio" target="_blank">
-                github
-            </a>
-        </nav>
+      <!-- header -->
+      <header class="signature">
+        <!-- <img src="img/hamburger_icon.jpg" alt="h`amburger icon to open up the nav menu" id="hamburger" onclick="toggleMenu()"> -->
+        <a href="../index.html" class="sig-link">
+          <h1>Gabriele Dal Cengio</h1>
+          <p>Full Stack Developer</p>
+        </a>
+      </header>
+      <nav class="nav-main" id="nav-main">
+        <a
+          class="nav-button link"
+          href="../GabrieleDalCengio_Resume.pdf"
+          target="_blank"
+        >
+          resume
+        </a>
+        <a
+          class="nav-button link"
+          href="mailto:dalcengio.gabriele@gmail.com"
+          target="_top"
+        >
+          email
+        </a>
+        <a
+          class="nav-button link"
+          href="https://www.linkedin.com/in/gabriele-dal-cengio-61a188144"
+          target="_blank"
+        >
+          linkedIn
+        </a>
+        <a
+          class="nav-button link"
+          href="https://github.com/gdalcengio"
+          target="_blank"
+        >
+          github
+        </a>
+      </nav>
 
-        <!-- content -->
-        <section class="content-wrapper">
-            <div class="about">
-                <h2>Van Street Eats</h2>
-                <p>Internet Computing Technologies Final Project | Fall 2019</p>
+      <!-- content -->
+      <section class="content-wrapper">
+        <div class="about">
+          <h2>Van Street Eats</h2>
+          <p>Internet Computing Technologies Final Project | Fall 2019</p>
 
-                <img src="../img/thumb_vanstreeteats.jpg" class="limit" alt="final project">
-                <figcaption>screenshot of final listing page</figcaption>
+          <img
+            src="../img/thumb_vanstreeteats.jpg"
+            class="limit"
+            alt="final project"
+            loading="lazy"
+          />
+          <figcaption>screenshot of final listing page</figcaption>
 
-                <h3>Context</h3>
-                <p>For a semester long final project, we were tasked to create a dynamic website using php, mySQL and
-                    AJAX technologies. Our requirements were that users must be able to sign up and sign in with
-                    encrypted passwords and that we displayed linkable cards from a list page. On this list page, the
-                    content cards must have a way to categorize initially and a way to filter further.
-                </p>
-                <!-- <img src="../img/vse_signup.JPG" alt="vancouver street eats sign up page">
+          <h3>Context</h3>
+          <p>
+            For a semester long final project, we were tasked to create a
+            dynamic website using php, mySQL and AJAX technologies. Our
+            requirements were that users must be able to sign up and sign in
+            with encrypted passwords and that we displayed linkable cards from a
+            list page. On this list page, the content cards must have a way to
+            categorize initially and a way to filter further.
+          </p>
+          <!-- <img src="../img/vse_signup.JPG" alt="vancouver street eats sign up page">
                     <figcaption>user sign up page</figcaption> -->
-                <!-- <p>Click here to try it out  <a href="">here</a>. </p> -->
-                <!-- <iframe width="720" height="540" src="../352report.pdf"></iframe> -->
+          <!-- <p>Click here to try it out  <a href="">here</a>. </p> -->
+          <!-- <iframe width="720" height="540" src="../352report.pdf"></iframe> -->
 
-                <h3>Process</h3>
-                <h4>Database Design</h4>
-                <img src="../img/vse_db.JPG" class="limit" alt="database design">
-                <figcaption>entity-relationship diagram design</figcaption>
-                <p>I first created a simple database schema with 3 tables. In the vendors table, we have the superkey
-                    ‘id’. This auto increments with each added and is a way to keep this table organized easily. The
-                    rest of the attributes are general strings except for rating. Rating ties into the review table and
-                    will always only be 0 - 5. One of which contains all the data relating to the street vendors,
-                    another containing user information and the last containing all review information. In the Reviews
-                    table, I demonstrated the concept of one to many between the relationships. The users table contains
-                    all information about a registered user. Its primary key is username as none are allowed to be the
-                    same. There’s a hashed password, full name, email to soft prevent filling the database with spam.
-                    This table is connected to the other two via relationships “likes” and “reviewedBy”. The like
-                    relationship is for homepage customization and the reviewedBy table is for displaying the reviews on
-                    the webpage. (initial names are slightly different than the ones in the final database)</p>
+          <h3>Process</h3>
+          <h4>Database Design</h4>
+          <img
+            src="../img/vse_db.JPG"
+            class="limit"
+            alt="database design"
+            loading="lazy"
+          />
+          <figcaption>entity-relationship diagram design</figcaption>
+          <p>
+            I first created a simple database schema with 3 tables. In the
+            vendors table, we have the superkey ‘id’. This auto increments with
+            each added and is a way to keep this table organized easily. The
+            rest of the attributes are general strings except for rating. Rating
+            ties into the review table and will always only be 0 - 5. One of
+            which contains all the data relating to the street vendors, another
+            containing user information and the last containing all review
+            information. In the Reviews table, I demonstrated the concept of one
+            to many between the relationships. The users table contains all
+            information about a registered user. Its primary key is username as
+            none are allowed to be the same. There’s a hashed password, full
+            name, email to soft prevent filling the database with spam. This
+            table is connected to the other two via relationships “likes” and
+            “reviewedBy”. The like relationship is for homepage customization
+            and the reviewedBy table is for displaying the reviews on the
+            webpage. (initial names are slightly different than the ones in the
+            final database)
+          </p>
 
-                <h4>Dynamic Content</h4>
-                <img src="../img/vse_listing.JPG" class="limit" alt="content page">
-                <figcaption>dynamically generated content page from database</figcaption>
-                <p>I first created a page to list all of the vendors from my database (first image shown above). When a
-                    user clicks on one of the content cards on the listing page , then they will be taken to a custom
-                    page like this. The card brings the user to the content.php url and appends the primary key of the
-                    vendor using the HTTP method GET. Looking back I would redesign this page first.</p>
+          <h4>Dynamic Content</h4>
+          <img
+            src="../img/vse_listing.JPG"
+            class="limit"
+            alt="content page"
+            loading="lazy"
+          />
+          <figcaption>
+            dynamically generated content page from database
+          </figcaption>
+          <p>
+            I first created a page to list all of the vendors from my database
+            (first image shown above). When a user clicks on one of the content
+            cards on the listing page , then they will be taken to a custom page
+            like this. The card brings the user to the content.php url and
+            appends the primary key of the vendor using the HTTP method GET.
+            Looking back I would redesign this page first.
+          </p>
 
-                <h4>User Functionality</h4>
-                <img src="../img/vse_signup.JPG" class="limit" alt="sign up page">
-                <figcaption>sign up page that will register users with valid information into the user table
-                </figcaption>
-                <p>I then went on to create the user sign up functionality. All data in the semantically marked up form
-                    is unable to submit unless the data is valid. When the user enters valid information, the user data
-                    is registered and they will be able to login. I did not find too much difficulty at this part. </p>
+          <h4>User Functionality</h4>
+          <img
+            src="../img/vse_signup.JPG"
+            class="limit"
+            alt="sign up page"
+            loading="lazy"
+          />
+          <figcaption>
+            sign up page that will register users with valid information into
+            the user table
+          </figcaption>
+          <p>
+            I then went on to create the user sign up functionality. All data in
+            the semantically marked up form is unable to submit unless the data
+            is valid. When the user enters valid information, the user data is
+            registered and they will be able to login. I did not find too much
+            difficulty at this part.
+          </p>
 
-                <img src="../img/vse_change.JPG" class="limit" alt="change information page">
-                <figcaption>user information edit page</figcaption>
-                <p>Once they have logged in, they are able to edit their information. Submitting this edit form will
-                    change any attributes specified.</p>
+          <img
+            src="../img/vse_change.JPG"
+            class="limit"
+            alt="change information page"
+            loading="lazy"
+          />
+          <figcaption>user information edit page</figcaption>
+          <p>
+            Once they have logged in, they are able to edit their information.
+            Submitting this edit form will change any attributes specified.
+          </p>
 
+          <h3>What I've Learned</h3>
+          <p>
+            I really enjoyed how much I’ve learned in this project, having the
+            interaction between front end and databases gave me the practical
+            knowledge I needed to create similar, more refined projects. I had a
+            bit of a struggle making sure that my query strings were consistent.
+            They constantly had bugs and that is where I spent the most time. I
+            enjoyed jquery very much and will be using it much more in the
+            future. Another challenge I had was the overall ux. I need to get
+            better and iterate quicker when designing websites. I’m satisfied as
+            this was a first attempt, but there are many areas I could improve.
+            The most important area I found was modularization of code. Since I
+            did not quite understand php at the start, I wrote spaghetti code.
+            If I were to redo this project, I’d modularize it from the start to
+            keep it plenty organized.
+          </p>
+          <img
+            src="../img/vse_helper.JPG"
+            class="limit"
+            alt=""
+            loading="lazy"
+          />
+          <figcaption>
+            generic helper functions to aid in connectivity to database
+          </figcaption>
+        </div>
+      </section>
 
-                <h3>What I've Learned</h3>
-                <p>I really enjoyed how much I’ve learned in this project, having the interaction between front end and
-                    databases gave me the practical knowledge I needed to create similar, more refined projects. I had a
-                    bit of a struggle making sure that my query strings were consistent. They constantly had bugs and
-                    that is where I spent the most time. I enjoyed jquery very much and will be using it much more in
-                    the future. Another challenge I had was the overall ux. I need to get better and iterate quicker
-                    when designing websites. I’m satisfied as this was a first attempt, but there are many areas I could
-                    improve. The most important area I found was modularization of code. Since I did not quite
-                    understand php at the start, I wrote spaghetti code. If I were to redo this project, I’d modularize
-                    it from the start to keep it plenty organized.</p>
-                <img src="../img/vse_helper.JPG" class="limit" alt="">
-                <figcaption>generic helper functions to aid in connectivity to database</figcaption>
-            </div>
-        </section>
+      <aside class="selection">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>PHP</li>
+          <li>Git</li>
+          <li>SQL</li>
+          <li>AJAX</li>
+        </ul>
 
-        <aside class="selection">
-            <h3>Technical Skills</h3>
-            <ul>
-                <li>PHP</li>
-                <li>Git</li>
-                <li>SQL</li>
-                <li>AJAX</li>
-            </ul>
+        <h3>My Roles</h3>
+        <p>
+          This was a solo project. I designed the website, marked it up,
+          connected it to my database and everything else on my own.
+        </p>
 
-            <h3>My Roles</h3>
-            <p>This was a solo project. I designed the website, marked it up, connected it to my database and everything
-                else on my own. </p>
-
-            <h3>Team Members</h3>
-            <p>none</p>
-        </aside>
-
+        <h3>Team Members</h3>
+        <p>none</p>
+      </aside>
     </div>
 
-
-
     <script src="../hamburger.js"></script>
-
-</body>
-
+  </body>
 </html>

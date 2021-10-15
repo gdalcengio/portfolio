@@ -1,96 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gabriele Dal Cengio</title>
 
-    <link href="css/normalize.css" rel="stylesheet">
-    <link rel="icon" href="../favicon.png">
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link rel="icon" href="../favicon.png" />
     <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:wght@300|Open+Sans&display=swap" rel="stylesheet"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans&display=swap"
-        rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/grid.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="grid-wrapper">
-        <!-- header -->
-        <header class="signature">
-            <img src="img/hamburger_icon.jpg" alt="hamburger icon to open up the nav menu" id="hamburger"
-                onclick="toggleMenu()">
-            <a href="index.html" class="sig-link">
-                <h1>Gabriele Dal Cengio</h1>
-                <p>Full Stack Developer</p>
-            </a>
-        </header>
-        <nav class="nav-main" id="nav-main">
-            <a class="nav-button link" href="GabrieleDalCengio_Resume.pdf" target="_blank">
-                resume
-            </a>
-            <a class="nav-button link" href="mailto:dalcengio.gabriele@gmail.com" target="_top">
-                email
-            </a>
-            <a class="nav-button link" href="https://www.linkedin.com/in/gabriele-dal-cengio-61a188144" target="_blank">
-                linkedIn
-            </a>
-            <a class="nav-button link" href="https://github.com/gdalcengio" target="_blank">
-                github
-            </a>
-        </nav>
+      <!-- header -->
+      <header class="signature">
+        <img
+          src="img/hamburger_icon.jpg"
+          alt="hamburger icon to open up the nav menu"
+          id="hamburger"
+          onclick="toggleMenu()"
+        />
+        <a href="index.html" class="sig-link">
+          <h1>Gabriele Dal Cengio</h1>
+          <p>Full Stack Developer</p>
+        </a>
+      </header>
+      <nav class="nav-main" id="nav-main">
+        <a
+          class="nav-button link"
+          href="GabrieleDalCengio_Resume.pdf"
+          target="_blank"
+        >
+          resume
+        </a>
+        <a
+          class="nav-button link"
+          href="mailto:dalcengio.gabriele@gmail.com"
+          target="_top"
+        >
+          email
+        </a>
+        <a
+          class="nav-button link"
+          href="https://www.linkedin.com/in/gabriele-dal-cengio-61a188144"
+          target="_blank"
+        >
+          linkedIn
+        </a>
+        <a
+          class="nav-button link"
+          href="https://github.com/gdalcengio"
+          target="_blank"
+        >
+          github
+        </a>
+      </nav>
 
-        <!-- project cards -->
-        <section class="card-wrapper" id="projects">
-            <div class="image-link-container">
-                <img src="img/thumb_constelation.jpg" alt="van street eat web app" class="image-link">
-                <a href="projects/syshacks.html" class="overlay">
-                    <h4>Syshacks 2020 | Const-elation</h4>
-                </a>
-            </div>
-            <div class="image-link-container">
-                <img src="img/thumb_alphamensae.jpg" alt="retirement business for my father" class="image-link">
-                <a href="projects/alphamensae.html" class="overlay">
-                    <h4>Alpha Mensae Publishing Inc.</h4>
-                </a>
-            </div>
-            <div class="image-link-container">
-                <img src="img/thumb_vanstreeteats.jpg" alt="van street eat web app" class="image-link">
-                <a href="projects/vanstreeteats.html" class="overlay">
-                    <h4>Van Street Eats</h4>
-                </a>
-            </div>
-            <div class="image-link-container">
-                <img src="img/thumb_resurgence.jpg" alt="IAT 410 - Game Design Final Project: resurgence"
-                    class="image-link">
-                <a href="projects/resurgence.html" class="overlay">
-                    <h4>Resurgence</h4>
-                </a>
-            </div>
-            <div class="image-link-container">
-                <img src="img/thumb_chip8.JPG"
-                    alt="CMPT 276 - Intro to Software Engineering Final Project: Chip-8 Emulator" class="image-link">
-                <a href="projects/chip8.html" class="overlay">
-                    <h4>Chip-8 Emulator</h4>
-                </a>
-            </div>
-            <!-- <div class="image-link-container mix game design">
+      <!-- project cards -->
+      <section class="card-wrapper" id="projects">
+        <div class="image-link-container">
+          <img
+            src="img/thumb_react.jpg"
+            alt="small react projects"
+            class="image-link"
+            loading="lazy"
+          />
+          <a href="projects/reactprojects.html" class="overlay">
+            <h4>Small React Projects</h4>
+          </a>
+        </div>
+        <div class="image-link-container">
+          <img
+            src="img/thumb_constelation.jpg"
+            alt="van street eat web app"
+            class="image-link"
+            loading="lazy"
+          />
+          <a href="projects/syshacks.html" class="overlay">
+            <h4>Syshacks 2020 | Const-elation</h4>
+          </a>
+        </div>
+        <div class="image-link-container">
+          <img
+            src="img/thumb_alphamensae.jpg"
+            alt="retirement business for my father"
+            class="image-link"
+            loading="lazy"
+          />
+          <a href="projects/alphamensae.html" class="overlay">
+            <h4>Alpha Mensae Publishing Inc.</h4>
+          </a>
+        </div>
+        <div class="image-link-container">
+          <img
+            src="img/thumb_vanstreeteats.jpg"
+            alt="van street eat web app"
+            class="image-link"
+            loading="lazy"
+          />
+          <a href="projects/vanstreeteats.html" class="overlay">
+            <h4>Van Street Eats</h4>
+          </a>
+        </div>
+        <div class="image-link-container">
+          <img
+            src="img/thumb_resurgence.jpg"
+            alt="IAT 410 - Game Design Final Project: resurgence"
+            class="image-link"
+            loading="lazy"
+          />
+          <a href="projects/resurgence.html" class="overlay">
+            <h4>Resurgence</h4>
+          </a>
+        </div>
+        <div class="image-link-container">
+          <img
+            src="img/thumb_chip8.JPG"
+            alt="CMPT 276 - Intro to Software Engineering Final Project: Chip-8 Emulator"
+            class="image-link"
+            loading="lazy"
+          />
+          <a href="projects/chip8.html" class="overlay">
+            <h4>Chip-8 Emulator</h4>
+          </a>
+        </div>
+        <!-- <div class="image-link-container mix game design">
                 <img src="img/virtro.jpg" alt="virtro entertainment logo" class="image-link">
                 <a href="projects/virtro.html" class="overlay"><h4>virtro entertainment</h4></a>
             </div> -->
 
-            <!-- <div class="image-link-container game">
+        <!-- <div class="image-link-container game">
                 <img src="img/thumb_resurgence.jpg" alt="this is an example image" class="image-link">
                 <a href="https://www.google.com" class="overlay overlay-frontend"><h4>resurgence</h4></a>
             </div>              this is a template for efficiency-->
-        </section>
+      </section>
 
-        <!-- project cards selection (outdated, didn't like this, will delete)-->
-        <!-- <aside class="selection">
+      <!-- project cards selection (outdated, didn't like this, will delete)-->
+      <!-- <aside class="selection">
             <p class="nav-button link" id="all-select" onclick="showAll()">show all</p>
             <p class="nav-button link" id="all-select" onclick="filterSelection('mix')">mixed</p>
             <p class="nav-button link" id="frontend-select" onclick="filterSelection('frontend')">frontend</p>
@@ -101,6 +155,5 @@
     </div>
     <script src="filter.js"></script>
     <script src="hamburger.js"></script>
-</body>
-
+  </body>
 </html>

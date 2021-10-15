@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriele Dal Cengio - Projects: built with react</title>
+
+    <link rel="icon" href="../favicon.png" />
+    <link href="../css/normalize.css" rel="stylesheet" />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:wght@300|Open+Sans&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../css/grid.css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="grid-wrapper">
+      <!-- header -->
+      <header class="signature">
+        <!-- <img src="img/hamburger_icon.jpg" alt="h`amburger icon to open up the nav menu" id="hamburger" onclick="toggleMenu()"> -->
+        <a href="../index.html" class="sig-link">
+          <h1>Gabriele Dal Cengio</h1>
+          <p>Full Stack Developer</p>
+        </a>
+      </header>
+      <nav class="nav-main" id="nav-main">
+        <a
+          class="nav-button link"
+          href="../GabrieleDalCengio_Resume.pdf"
+          target="_blank"
+        >
+          resume
+        </a>
+        <a
+          class="nav-button link"
+          href="mailto:dalcengio.gabriele@gmail.com"
+          target="_top"
+        >
+          email
+        </a>
+        <a
+          class="nav-button link"
+          href="https://www.linkedin.com/in/gabriele-dal-cengio-61a188144"
+          target="_blank"
+        >
+          linkedIn
+        </a>
+        <a
+          class="nav-button link"
+          href="https://github.com/gdalcengio"
+          target="_blank"
+        >
+          github
+        </a>
+      </nav>
+
+      <!-- content -->
+      <section class="content-wrapper">
+        <div class="about">
+          <h2>Small React Projects</h2>
+          <p>Multiple | May 2021 - Current</p>
+
+          <h3>Weather Clock + openweathermapAPI</h3>
+          <img
+            src="../img/react-gifs/weatherclock3.gif"
+            class="limit"
+            alt="weather clock gif"
+          />
+          <figcaption>Functionality of weather clock app</figcaption>
+
+          <p>
+            This was a combination of a clock and weather app. This was to
+            practice datetime objects, pulling via API, and using proxy servers
+            to hide private keys to the public API.
+          </p>
+
+          <h3>To Do App</h3>
+          <img src="../img/react-gifs/todo.gif" class="limit" alt="to do gif" />
+          <figcaption>Functionality of todo app</figcaption>
+
+          <p>
+            This is a simple to do app with checkboxes, notifications, adding
+            via enter or add button, priorities and removal of items.
+          </p>
+
+          <h3>Tic Tac Toe Tutorial + Extensions</h3>
+          <img
+            src="../img/react-gifs/tictactoe.gif"
+            class="limit"
+            alt="tic tac toe app"
+          />
+          <figcaption>Functionality of tic tac toe app</figcaption>
+
+          <p>
+            Here is the finished tutorial from the react website with all the
+            recommended extra functions implemented for further learning.
+          </p>
+        </div>
+      </section>
+
+      <aside class="selection">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Javascript + React</li>
+        </ul>
+      </aside>
+    </div>
+
+    <script src="../hamburger.js"></script>
+  </body>
+</html>
